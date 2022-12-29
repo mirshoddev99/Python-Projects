@@ -58,7 +58,7 @@ score_line.speed(0)
 score_line.goto(0, 320)
 score_line.color('white')
 score_line.pendown()
-score_line.write("Score: 0", align="center", font=("Courier", 20, "normal"))
+score_line.write("Score:0", align="center", font=("Courier", 20, "normal"))
 score_line.hideturtle()
 
 # creating a snake
@@ -130,7 +130,7 @@ def game_over():
     global score
     score = 0
     score_line.clear()
-    score_line.write(f"Score: {score}", align="center", font=("Courier", 20, "normal"))
+    score_line.write(f"Score:{score}", align="center", font=("Courier", 20, "normal"))
 
 
 while True:
@@ -156,7 +156,7 @@ while True:
         up_score = update_score(score)
 
         score_line.clear()
-        score_line.write("Score: {}".format(up_score), align="center", font=("Courier", 20, "normal"))
+        score_line.write("Score:{}".format(up_score), align="center", font=("Courier", 20, "normal"))
 
         new_body = Turtle()
         new_body.speed(0)
@@ -191,5 +191,6 @@ while True:
         snake.setx(x + 20)
 
     time.sleep(0.1)
+
 
 window.mainloop()

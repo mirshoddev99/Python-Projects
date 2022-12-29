@@ -9,16 +9,14 @@ req_url = f"{BASE_URL}{API_KEY}&q={country_city}&aqi=yes"
 response = requests.get(req_url)
 
 my_data = response.json()
-pprint.pprint(my_data)
-
-
-# print(my_data.keys())
+# pprint.pprint(my_data)
+print()
 
 
 def print_data():
     # checking status code and type data of response
     if response.status_code == 200 and response.headers['Content-Type'] == "application/json":
-        print(f"\t\t\n........The Weather forecast........")
+        print(f"\t\t........The Weather forecast........")
 
         info = f"""
             County: {my_data['location']['country']}
