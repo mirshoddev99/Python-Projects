@@ -1,26 +1,22 @@
 from pytube import YouTube
 
-def Download(link):
 
+def Download(link):
     youtubeObject = YouTube(link)
     youtubeObject = youtubeObject.streams.get_highest_resolution()
     try:
         print("The video is being downloaded....")
         youtubeObject.download()
+        title_video = youtubeObject.title
+        print("Title of the video is {}\n".format(title_video))
+        print("Download was completed successfully")
+
     except:
         print("An error has occurred")
 
-    title_video = youtubeObject.title
 
-
-    print("Title of the video is {}\n".format(title_video))
-
-    print("Download was completed successfully")
-
-
-link = input("Enter the YouTube video URL: ")
+link = input("Enter the YouTube URL: ")
 Download(link)
-
 
 # Explanation
 """
