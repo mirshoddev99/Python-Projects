@@ -9,10 +9,12 @@ def Download(link):
         youtubeObject.download()
         title_video = youtubeObject.title
         print("Title of the video is {}\n".format(title_video))
-        print("Download was completed successfully")
+        print("Video downloading was completed successfully")
 
     except:
         print("An error has occurred")
+        
+
 
 
 link = input("Enter the YouTube URL: ")
